@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue May 10 17:42:23 2016
-
 @author: jvanhouten
 
 PYTHON 3.5
 
 if you want to update an existing file, 
-make sure you update 'fileNameWithoutExt' in constants below
-place this file in the folder of the python script
+make sure you update 'fileNameWithoutExt' accordingly 
+and place this file in the folder of the python script
 
 """
 ############################################
@@ -35,6 +33,9 @@ sOVERVIEW_URL = r'http://www.zoopla.co.uk/for-sale/property/london/?include_reti
 
 # pages to scrape
 iMAX_PAGES = 80 # max 400 # change based on number of pages to scrape
+
+# filenames
+fileNameWithoutExt = 'ZooplaScrape'
 
 ############################################
 # CONSTANTS
@@ -64,9 +65,6 @@ longitude = 'Longitude'
 urlColName = 'URL'
 headers = [iDColName, originalDateColName, dateColName, originalPriceCol, newPriceCol, 
            beds, propertyType, postCode, address, latitude, longitude, urlColName]
-
-# filenames
-fileNameWithoutExt = 'ZooplaScrape'
 
 ############################################
 # VARIABLES
