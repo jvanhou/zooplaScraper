@@ -4,7 +4,7 @@
 
 PYTHON 3.5
 
-this module scrapes current property data from Zoopla
+this module scrapes current property data from Zoopla given a custom search url
 and saves it as an .xlsx file in the working directory
 
 Info stored:
