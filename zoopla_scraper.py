@@ -4,6 +4,21 @@
 
 PYTHON 3.5
 
+this module scrapes current property data from Zoopla
+and saves it as an .xlsx file in the working directory
+
+Info stored:
+- Property ID
+- original listing date
+- changes date (to asking price)
+- original asking price
+- changed asking price
+- post code
+- number of beds
+- property type
+- address
+- latitude and longitude
+
 if you want to update an existing file, 
 make sure you update 'fileNameWithoutExt' accordingly 
 and place this file in the folder of the python script
@@ -65,12 +80,6 @@ longitude = 'Longitude'
 urlColName = 'URL'
 headers = [iDColName, originalDateColName, dateColName, originalPriceCol, newPriceCol, 
            beds, propertyType, postCode, address, latitude, longitude, urlColName]
-
-############################################
-# VARIABLES
-############################################
-# create dictionary with mapping of tabnames and list of available datapoints
-dictTabHeaders = {'foo':'bar'}
 
 ############################################
 # CLASSES
@@ -333,7 +342,6 @@ class dataset:
 
 def main():
     zoopla = ZooplaSite(sOVERVIEW_URL, iMAX_PAGES)
-#    zoopla.load_properties()
     zoopla.load_properties_async(25)
     zoopla.save_data(fileNameWithoutExt)
 
